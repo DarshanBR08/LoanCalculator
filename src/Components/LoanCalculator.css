@@ -1,0 +1,278 @@
+.calculator {
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.3rem;
+    font-weight: 100;
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-group div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .calculate-btn {
+    background-color: #1976d2;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  input[type="text"],
+  input[type="number"] {
+    padding: 1rem;
+    border: 0.5px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+body.light input[type="text"]:hover,
+body.light input[type="number"]:hover { 
+    border: 1px solid #141414;
+}
+/* Dark mode styling */
+body.dark input[type="text"],
+body.dark input[type="number"] {
+  background-color: #1e1e1e;
+  color: white;
+  border: 0.5px solid #404040;
+}
+body.dark input[type="text"]:hover,
+body.dark input[type="number"]:hover { 
+    border: 0.8px solid #f7f4f4;
+}
+  button{
+    height: 2.5rem;
+    
+    background-color: #1976d2;
+    border: none;
+    color: white;
+    border-radius: 3px;
+  }
+
+  .loan-calculator {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .calculate-btn,
+  .reset-btn {
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  .reset-btn{
+    background: none;
+    color: #cc45b8;
+    border:1px solid #cc45b8;
+  }
+  .currency-selector {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .table-wrapper {
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  .table-wrapper h3 {
+    margin: 0;
+    font-size: 1.5rem;           /* Increase font size */
+    font-weight: 400;            /* Lighter font weight */
+    background-color: rgba(200, 200, 255, 0.08); /* Light blur-like background */
+    padding: 10px 15px;
+    backdrop-filter: blur(3px);  /* Optional: adds slight blur */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  tbody{
+    background-color: rgba(200, 200, 255, 0.08);
+    
+  }
+  th, td {
+    background: transparent;
+    border-bottom: 0.1px solid rgba(174, 174, 174, 0.534);
+    text-align: center;
+    width:25%;
+  }
+  th{
+    font-weight: 100;
+  }
+  .cur-res{
+    display:flex;
+    justify-content: space-between;
+  }
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .scroll-table {
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  .scroll-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 14px;
+    text-align: center;
+    
+  }
+  
+  .scroll-body {
+    display: block;
+    max-height: 320px; /* adjust height as needed */
+    overflow-y: auto;
+    width: 100%;
+  }
+  
+  .scroll-body tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .scroll-body td {
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(0, 0, 0 ,0.1);
+  }
+  
+  
+  .input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Stack items vertically on small screens */
+  @media (max-width: 600px) {
+    .input-group {
+      flex-direction: column;
+    }
+  }
+  
+.custom-dropdown {
+  position: relative;
+  width: 80px;
+  font-size: 16px;
+}
+
+.dropdown-container {
+  background-color: white;
+  color: black;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hover effect in light mode */
+body.light .dropdown-container:hover {
+  background-color: #f0f0f0;
+}
+
+/* Dark mode */
+body.dark .dropdown-container {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark .dropdown-container:hover {
+  background-color: #333333;
+}
+
+/* Dropdown list */
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    max-height: 200px;
+    overflow-y: scroll; /* Still scrollable */
+    z-index: 10;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  
+    /* Hide scrollbar (WebKit browsers) */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+  }
+  
+  .dropdown-options::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  
+
+  
+.dropdown-options li {
+  padding: 12px;
+  cursor: pointer;
+}
+
+/* Hover style for options in light mode */
+body.light .dropdown-options li:hover {
+  background-color: #e0e0e0;
+}
+
+/* Dark mode dropdown list */
+body.dark .dropdown-options {
+  background-color: #1e1e1e;
+  border-color: #555;
+}
+
+body.dark .dropdown-options li {
+  color: white;
+
+}
+
+/* Hover style for dark mode */
+body.dark .dropdown-options li:hover {
+  background-color: #333333;
+}
+
+.arrow {
+  font-size: 12px;
+}
+
